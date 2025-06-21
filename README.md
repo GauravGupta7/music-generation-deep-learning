@@ -7,9 +7,13 @@ A musical piece comprises of a characteristic sequence of musical notes (denotin
 ## 🔴 **Brief on Data Used**
 We are using the kern humdrum dataset to train the model. This data contains the folksongs from Germany. Here, **kern** is the core pitch and duration representation for common practice music notation. The kern representation allows the pitch and canonical duration information to be encoded.  
   
-  Three types of data tokens are distinguised in **kerns:** notes, rest and barlines. These three data are some of the basic properties that determine the tonal quality of a musical piece. **Notes** can encode a variety of attributes including absolute pitch, accidental, canonical duration, articulation, ornamentation, ties, slurs, phrasing, stem-direction and beaming. 
+Three types of data tokens are distinguised in **kerns:** notes, rest and barlines. These three data are some of the basic properties that determine the tonal quality of a musical piece. **Notes** can encode a variety of attributes including absolute pitch, accidental, canonical duration, articulation, ornamentation, ties, slurs, phrasing, stem-direction and beaming. 
 
-  More about **kerns** can be studied from: https://www.humdrum.org/rep/kern/index.html
+More about **kerns** can be studied from: https://www.humdrum.org/rep/kern/index.html  
+The dataset can be downloaded from: https://kern.humdrum.org/cgi-bin/browse?l=essen/europa/deutschl
 
-  ## 🔴 **Data Preprocessing**
-  The model that we are building needs the training the data to be in proper format for it to understand and gain insights from it. For this the data needs to be cleaned and encoded in suitable format. 
+## 🔴 **Data Preprocessing**
+The model that we are building needs the training the data to be in proper format for it to understand and gain insights from it. For this the data needs to be cleaned and encoded in suitable format. 
+
+## 🔴 **References**
+[1] https://www.humdrum.org/rep/kern/index.html
