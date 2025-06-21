@@ -1,4 +1,4 @@
-# Music-Generation-Deep-Learning
+# Music-Generation-Using-LSTMs
 
 ## 🔴 **Foreground**
 
