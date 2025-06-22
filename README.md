@@ -15,5 +15,15 @@ The dataset can be downloaded from: https://kern.humdrum.org/cgi-bin/browse?l=es
 ## 🔴 **Data Preprocessing**
 The model that we are building needs the training the data to be in proper format for it to understand and gain insights from it. For this the data needs to be cleaned and encoded in suitable format. 
 
+## 🔴 **Understanding LSTM**
+LSTM stands for **Long Short Term Memory**. It is a type of RNN (Recurrent Neural Network) architecture designed to facilitate learning of long term dependencies in sequential data. When The LSTM architecture implements this using special type of memory cells that act as a conveyer belt carrying information across multiple time units. 
+
+The LSTM architecture have been put to use in below mentioned scenarios:
+* Natural Language processing
+* Time Series Analysis
+* Speech Recognition
+
+LSTM can help the RRN model to selectively remember and forget information, making them and efficient strategy in capturing long term dependencies in sequential data that traditional RRNs. 
+
 ## 🔴 **References**
 [1] https://www.humdrum.org/rep/kern/index.html
