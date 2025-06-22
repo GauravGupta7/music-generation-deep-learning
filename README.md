@@ -25,6 +25,9 @@ The LSTM architecture have been put to use in below mentioned scenarios:
 
 LSTM can help the RRN model to selectively remember and forget information, making them and efficient strategy in capturing long term dependencies in sequential data that traditional RRNs. 
 
+## 🔴 **Tools and Libraries Used**
+* **music21:** This is a python based toolkit for computer-aided musicology. It is an all rounder toolkit that can be used to generate, visualize and study music using python. The detailed documentation for music21 toolkit can be found at https://www.music21.org/music21docs/usersGuide/index.html
+
 ## 🔴 **References**
 [1] https://www.humdrum.org/rep/kern/index.html  
 [2] https://www.researchgate.net/publication/340493274_A_Review_on_the_Long_Short-Term_Memory_Model
