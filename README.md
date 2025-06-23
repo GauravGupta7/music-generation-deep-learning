@@ -15,6 +15,8 @@ The dataset can be downloaded from: https://kern.humdrum.org/cgi-bin/browse?l=es
 ## 🔴 **Data Preprocessing**
 The model that we are building needs the training the data to be in proper format for it to understand and gain insights from it. For this the data needs to be cleaned and encoded in suitable format. 
 
+We are implementing the transposition of the song. A particular song can be of any of the 24 available scales. Thus, training our model on all the 24 different scales is unnecessary and inefficient. This will cause extreme overhead while training the model. So we implement transposition and shift the songs on major scales to C<sub>Maj</sub> and the songs on minor scales to C<sub>m</sub>.
+
 ## 🔴 **Understanding LSTM**
 LSTM stands for **Long Short Term Memory**. It is a type of RNN (Recurrent Neural Network) architecture designed to facilitate learning of long term dependencies in sequential data. The Recurrent or very deep neural networks are challenging to train as they suffer from exploding/vanishing gradient problem<sup>[2]</sup>. To overcome this when learning the long term dependencies, the LSTM architecture was introduced. The LSTM architecture implements this using special type of memory cells that act as a conveyer belt carrying information across multiple time units.
 
