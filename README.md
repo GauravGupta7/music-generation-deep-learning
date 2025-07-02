@@ -19,6 +19,8 @@ We are implementing the transposition of the song. A particular song can be of a
 
 Later, we are encoding the song to machine readable format. We are performing encoding on each and every song and then we are storing the output as '.txt' files in a separate folder. Later, for convenience while model training, we are merging the processed songs into a single file dataset. 
 
+We are also using one-hot encoding in the data preprocessing stage so that we eliminate the ordinal relationships among the numbers. Since, we have created a categorical dataset during the preprocessing stage, it becomes extremely important for us to implement O.H.E for getting optimum performance from out model. 
+
 ### 🔶 **Understanding LSTM**
 LSTM stands for **Long Short Term Memory**. It is a type of RNN (Recurrent Neural Network) architecture designed to facilitate learning of long term dependencies in sequential data. The Recurrent or very deep neural networks are challenging to train as they suffer from exploding/vanishing gradient problem<sup>[2]</sup>. To overcome this when learning the long term dependencies, the LSTM architecture was introduced. The LSTM architecture implements this using special type of memory cells that act as a conveyer belt carrying information across multiple time units.
 
