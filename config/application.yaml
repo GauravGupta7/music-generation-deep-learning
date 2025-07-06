@@ -1,5 +1,6 @@
-dataset_path: ../data/essen/europa/deutschl/test
-save_path: ../data/essen/europa/deutschl/test_dataset
-mapping_file_path: ../data/essen/europa/deutschl/mapping.json
+dataset_path: data/essen/europa/deutschl/test_dataset
+save_path: data/essen/europa/deutschl/test_dataset
+mapping_file_path: data/essen/europa/deutschl/mapping.json
 acceptable_durations: [0.25, 0.5, 0.75, 1.0, 1.5, 2.0, 3.0, 4.0]
 sequence_length: 64
+data_size: 50000    # Due to hardware limitations, we will only use a subset of the dataset
