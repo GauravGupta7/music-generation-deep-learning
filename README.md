@@ -21,6 +21,8 @@ Later, we are encoding the song to machine readable format. We are performing en
 
 We are also using one-hot encoding in the data preprocessing stage so that we eliminate the ordinal relationships among the numbers. Since, we have created a categorical dataset during the preprocessing stage, it becomes extremely important for us to implement O.H.E for getting optimum performance from out model. 
 
+Now, due to resource limitations, running preprocessing every time becomes difficult. So we are storing the inputs and targets of as separate standalone file in our repository so that we don't have to execute preprocessing every time. 
+
 ### 🔶 **Understanding LSTM**
 LSTM stands for **Long Short Term Memory**. It is a type of RNN (Recurrent Neural Network) architecture designed to facilitate learning of long term dependencies in sequential data. The Recurrent or very deep neural networks are challenging to train as they suffer from exploding/vanishing gradient problem<sup>[2]</sup>. To overcome this when learning the long term dependencies, the LSTM architecture was introduced. The LSTM architecture implements this using special type of memory cells that act as a conveyer belt carrying information across multiple time units.
 
@@ -31,8 +33,38 @@ The LSTM architecture have been put to use in below mentioned scenarios:
 
 LSTM can help the RRN model to selectively remember and forget information, making them and efficient strategy in capturing long term dependencies in sequential data that traditional RRNs. 
 
-### 🔶 **Tools and Libraries Used**
-* **music21:** This is a python based toolkit for computer-aided musicology. It is an all rounder toolkit that can be used to generate, visualize and study music using python. The detailed documentation for music21 toolkit can be found at https://www.music21.org/music21docs/usersGuide/index.html
+### 🔶 **Tools and Libraries Used**  
+* **music21:** This is a python based toolkit for computer-aided musicology. It is an all rounder toolkit that can be used to generate, visualize and study music using python. The detailed documentation for music21 toolkit can be found at https://www.music21.org/music21docs/usersGuide/index.html  
+
+### 🔶 **Important Configuration Parameters**
+
+* Test and preprocessed data paths
+```yaml
+dataset_path: data/essen/europa/deutschl/test_dataset
+save_path: data/essen/europa/deutschl/test_dataset
+mapping_file_path: data/essen/europa/deutschl/mapping.json
+```
+* The song beats duration that will be accepted by the model can be passed inside this list
+
+```yaml
+acceptable_durations: [0.25, 0.5, 0.75, 1.0, 1.5, 2.0, 3.0, 4.0]
+```
+* The length of the sequence that will be used to train the LSTM
+```yaml
+sequence_length: 64
+```
+* The amount of data that you want to use for preprocessing and training is restricted due to resources constraints on local PC.
+```yaml
+data_size: 150000
+```
+* If you want the preprocessing funtions to execute then the value of the below parameter can be updated accordingly
+```yaml
+isPreprocessingRequired: True 
+```
+* Since we are avoiding preprocessing when not needed, we are storing the preprocessed tensors at the below folder path, and loading them from here when needed
+```yaml
+testTargetPath: processed_tensors
+```
 
 ### 🔶 **References**
 [1] https://www.humdrum.org/rep/kern/index.html  
