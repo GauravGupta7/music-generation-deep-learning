@@ -1,11 +1,17 @@
 dataset_path: data/essen/europa/deutschl/test_dataset
 save_path: data/essen/europa/deutschl/test_dataset
 mapping_file_path: data/essen/europa/deutschl/mapping.json
+saveModelPath: notebooks/models
 acceptable_durations: [0.25, 0.5, 0.75, 1.0, 1.5, 2.0, 3.0, 4.0]
 sequence_length: 64
-data_size: 150000    # Due to hardware limitations, we will only use a subset of the dataset
-isPreprocessingRequired: True  # Set to true if you want to run preprocessing, false if you want to use preprocessed data
+data_size: 320000    # Due to hardware limitations, we will only use a subset of the dataset
+isPreprocessingRequired: False  # Set to true if you want to run preprocessing, false if you want to use preprocessed data
 testTargetPath: processed_tensors
+lossFunction: categorical_crossentropy  # Loss function to be used for training
+learningRate: 0.001     # Learning rate of the model
+numberOfUnits: [256]  # Number of units in the LSTM layer
+numberOfEpocs: 50
+trainingBatchSize: 64
 
 version: 1
 formatters:
