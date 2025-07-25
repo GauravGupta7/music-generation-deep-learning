@@ -10,8 +10,9 @@ testTargetPath: processed_tensors
 lossFunction: categorical_crossentropy  # Loss function to be used for training
 learningRate: 0.001     # Learning rate of the model
 numberOfUnits: [256]  # Number of units in the LSTM layer
-numberOfEpocs: 50
+numberOfEpocs: 20
 trainingBatchSize: 64
+temperature: 0.7
 
 version: 1
 formatters:

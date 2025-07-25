@@ -1,6 +1,10 @@
 # Imports
 import yaml
 import numpy as np
+
+if not hasattr(np, 'typeDict'):
+    np.typeDict = np.sctypeDict
+    
 from DataPreprocessing import generating_training_sequences
 import logging
 import logging.config
@@ -74,7 +78,7 @@ def main():
     
     # Saving the model
     log.info("Saving the model...")
-    saveModelPath = config['saveModelPath'] + "/model.keras"
+    saveModelPath = config['saveModelPath'] + "/model.h5"
     model.save(saveModelPath)
     log.info(f"Model saved successfully at {saveModelPath}")
 
