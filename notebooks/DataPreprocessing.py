@@ -1,4 +1,8 @@
 # Importing libraries
+import numpy as np
+if not hasattr(np, 'typeDict'):
+    np.typeDict = np.sctypeDict  # Fix for compatibility issues
+
 import os
 import music21 as m21
 import json
@@ -70,8 +74,8 @@ def preprocess_songs(dataset_path, save_path, acceptable_durations):
     # Load the songs from the dataset
     songs = load_songs_kern_dataset(dataset_path)
     
-    # Filter songs based on acceptable durations
     for i, song in enumerate(songs):
+        # Filter songs based on acceptable durations
         if not has_acceptable_duration(song, acceptable_durations):
             continue
     
@@ -112,7 +116,8 @@ def create_single_file_dataset(dataset_path, sequence_length):
             file_path = os.path.join(path, file)
             song = load(file_path)
             songs = songs + song + " " + new_song_delimiter
-            songs = songs[:-1]     # remove the last delimiter to avoid trailing spaces
+    
+    songs = songs[:-1]     # remove the last delimiter to avoid trailing spaces
             
     # save the string in the single file
     #dataset_path1 = os.path.join(dataset_path,  f"songs.txt")
