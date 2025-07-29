@@ -8,11 +8,11 @@ data_size: 320000    # Due to hardware limitations, we will only use a subset of
 isPreprocessingRequired: False  # Set to true if you want to run preprocessing, false if you want to use preprocessed data
 testTargetPath: processed_tensors
 lossFunction: categorical_crossentropy  # Loss function to be used for training
-learningRate: 0.001     # Learning rate of the model
+learningRate: 0.01     # Learning rate of the model
 numberOfUnits: [256]  # Number of units in the LSTM layer
 numberOfEpocs: 20
 trainingBatchSize: 64
-temperature: 0.7
+temperature: 0.1
 
 version: 1
 formatters:

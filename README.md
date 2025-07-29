@@ -34,7 +34,11 @@ The LSTM architecture have been put to use in below mentioned scenarios:
 LSTM can help the RRN model to selectively remember and forget information, making them and efficient strategy in capturing long term dependencies in sequential data that traditional RRNs. 
 
 ### 🔶 **Tools and Libraries Used**  
-* **music21:** This is a python based toolkit for computer-aided musicology. It is an all rounder toolkit that can be used to generate, visualize and study music using python. The detailed documentation for music21 toolkit can be found at https://www.music21.org/music21docs/usersGuide/index.html  
+* **music21:** This is a python based toolkit for computer-aided musicology. It is an all rounder toolkit that can be used to generate, visualize and study music using python. The detailed documentation for music21 toolkit can be found at: https://www.music21.org/music21docs/usersGuide/index.html.    
+* **tensorflow.keras:** tf.keras is the high level API used for building machine/deep learning models in the tensorflow ecosystem. In this project they have been used to implement the LSTM network.   
+
+* **Pandas:** Pandas is an open-source python library widely used for data manipulation and analysis. It is an extremely useful tool for working with data structures primarily data series and data frames.  
+* **Numpy:** Numpy is also an open-source library in python for numerical and scientific computing. It makes working with multidimensional array simple. 
 
 ### 🔶 **Important Configuration Parameters**
 
